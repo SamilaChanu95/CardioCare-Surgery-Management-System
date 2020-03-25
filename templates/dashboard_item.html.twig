@@ -1,0 +1,89 @@
+{% block body %}
+    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
+        <li class="nav-item">
+            <a href="/" class="nav-link">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>Dashboard</p>
+            </a>
+        </li>
+        <li class="nav-item has-treeview menu-open">
+            <a href="/" class="nav-link">
+            <i class="nav-icon fas fa-home"></i>
+                <p>Home</p>
+            </a>
+        </li>
+        <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-clinic-medical"></i>
+                <p>Clinic<i class="right fas fa-angle-left"></i></p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="/patient" class="nav-link">
+                    <i class="nav-icon fas fa-user-injured"></i>
+                        <p>Patients</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/doctor" class="nav-link">
+                    <i class="nav-icon fas fa-user-md"></i>
+                        <p>Doctors</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/nurse" class="nav-link">
+                    <i class="nav-icon fas fa-user-nurse"></i>
+                        <p>Nurses</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/consultant" class="nav-link">
+                    <i class="nav-icon fas fa-user-tie"></i>
+                        <p>Consultants</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/technician" class="nav-link">
+                    <i class="nav-icon fas fa-user"></i>
+                        <p>Technicians</p>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+            <i class="nav-icon far fa-plus-square"></i>
+            <p>
+                Extras
+                <i class="fas fa-angle-left right"></i>
+            </p>
+            </a>
+            <ul class="nav nav-treeview">
+            <li class="nav-item">
+                <a href="pages/examples/login.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Login</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="pages/examples/register.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Register</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="pages/examples/forgot-password.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Forgot Password</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="pages/examples/recover-password.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Recover Password</p>
+                </a>
+            </li>
+        </li>
+    </ul>
+{% endblock %}
