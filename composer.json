@@ -6,6 +6,7 @@
         "ext-ctype": "*",
         "ext-iconv": "*",
         "friendsofphp/php-cs-fixer": "^2.16",
+        "knplabs/knp-snappy-bundle": "^1.7",
         "php-http/client-common": "^2.1",
         "php-http/discovery": "^1.7",
         "php-http/guzzle6-adapter": "^2.0",
