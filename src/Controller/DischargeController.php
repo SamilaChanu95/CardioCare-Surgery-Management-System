@@ -15,7 +15,7 @@ class DischargeController extends AbstractController
     {
         $patients = $this->getDoctrine()->getRepository(Patient::class)->findAll();
 
-        return $this->render('discharge/index.html.twig', [
+        return $this->render('discharge/discharge.html.twig', [
             'patients' => $patients
         ]);
 
