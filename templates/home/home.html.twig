@@ -3,236 +3,186 @@
 {% block title %}Home{% endblock %}
 
 {% block body %}
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <!-- Tell the browser to be responsive to screen width -->
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-        <!-- Ionicons -->
-        <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-        <!-- Tempusdominus Bbootstrap 4 -->
-        <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
-        <!-- iCheck -->
-        <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-        <!-- JQVMap -->
-        <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
-        <!-- Theme style -->
-        <link rel="stylesheet" href="dist/css/adminlte.min.css">
-        <!-- overlayScrollbars -->
-        <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-        <!-- Daterange picker -->
-        <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
-        <!-- summernote -->
-        <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
-        <!-- Google Font: Work Sans -->
-        <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-        <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-        <link rel="stylesheet" href="css/animate.css">
-        <link rel="stylesheet" href="css/owl.carousel.min.css">
-        <link rel="stylesheet" href="css/owl.theme.default.min.css">
-        <link rel="stylesheet" href="css/magnific-popup.css">
-        <link rel="stylesheet" href="css/aos.css">
-        <link rel="stylesheet" href="css/ionicons.min.css">
-        <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-        <link rel="stylesheet" href="css/jquery.timepicker.css">
-        <link rel="stylesheet" href="css/flaticon.css">
-        <link rel="stylesheet" href="css/icomoon.css">
-        <link rel="stylesheet" href="css/style.css">
+    <!-- Page Specifying Meta Data -->
+    {% include "meta_data.html.twig" %}
+        
+    <!-- CSS Links -->
+    {% include "css_part.html.twig" %}
 
-        <body class="hold-transition sidebar-mini layout-fixed">
-            <div class="wrapper">
+    <body class="hold-transition sidebar-mini layout-fixed">
+        <div class="wrapper">
 
-                <!-- Navbar -->
-                <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-                    <!-- Left navbar links -->
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
-                        </li>
-                        <li class="nav-item d-none d-sm-inline-block col-auto">
-                            <a href="/" class="nav-link active">Home</a>
-                        </li>
-                        <li class="nav-item d-none d-sm-inline-block col-auto">
-                            <a href="/clinic" class="nav-link">Clinic</a>
-                        </li>
-                        <li class="nav-item d-none d-sm-inline-block col-auto dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ward Addmission</a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-							  <a class="dropdown-item" href="/patient">Patients</a>
-                              <a class="dropdown-item" href="/doctor">Doctors</a>
-                              <a class="dropdown-item" href="/nurse">Nurses</a>
-                              <a class="dropdown-item" href="/consultant">Consultants</a>
-                              <a class="dropdown-item" href="/technician">Technicians</a>
-							</div>
-                        </li>
-                        <li class="nav-item d-none d-sm-inline-block col-auto">
-                            <a href="/icu" class="nav-link">ICU</a>
-                        </li>
-                        <li class="nav-item d-none d-sm-inline-block col-auto">
-                            <a href="/surgery" class="nav-link">Surgery</a>
-                        </li>
-                        <li class="nav-item d-none d-sm-inline-block col-auto">
-                            <a href="/discharge" class="nav-link">Discharge</a>
-                        </li>
-                    </ul>
+            <!-- Navbar -->
+            <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+                <!-- Left navbar links -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+                    </li>
+                    <li class="nav-item d-none d-sm-inline-block col-auto">
+                        <a href="/" class="nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item d-none d-sm-inline-block col-auto">
+                        <a href="/clinic" class="nav-link">Clinic</a>
+                    </li>
+                    <li class="nav-item d-none d-sm-inline-block col-auto dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ward Addmission</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						  <a class="dropdown-item" href="/patient">Patients</a>
+                          <a class="dropdown-item" href="/doctor">Doctors</a>
+                          <a class="dropdown-item" href="/nurse">Nurses</a>
+                          <a class="dropdown-item" href="/consultant">Consultants</a>
+                          <a class="dropdown-item" href="/technician">Technicians</a>
+						</div>
+                    </li>
+                    <li class="nav-item d-none d-sm-inline-block col-auto">
+                        <a href="/icu" class="nav-link">ICU</a>
+                    </li>
+                    <li class="nav-item d-none d-sm-inline-block col-auto">
+                        <a href="/surgery" class="nav-link">Surgery</a>
+                    </li>
+                    <li class="nav-item d-none d-sm-inline-block col-auto">
+                        <a href="/discharge" class="nav-link">Discharge</a>
+                    </li>
+                </ul>
 
-                    <!-- SEARCH FORM -->
-                    <form class="form-inline ml-auto">
-                        <div class="input-group input-group-sm col-form-label">
-                            <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-                            <div class="input-group-append">
-                                <button class="btn btn-navbar" type="submit">
-                                    <i class="fas fa-search"></i>
-                                </button>
-                            </div>
+                <!-- Search Form -->
+                {% include "search_form.html.twig" %}
+        
+                <!-- Left navbar links -->
+                {% include "navbar_link_logout.html.twig" %}
+
+            </nav>
+            <!-- /.navbar -->
+
+            <!-- Main Sidebar Container -->
+            <aside class="main-sidebar sidebar-dark-primary elevation-4">
+                <!-- Brand Logo -->
+                {% include "brand_logo.html.twig" %}
+
+                <!-- Sidebar -->
+                <div class="sidebar">
+                <!-- Sidebar user panel (optional) -->
+                    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                        <div class="image">
+                            <img src="{{ asset('dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
                         </div>
-                    </form>
-
-                    <!-- Right navbar links -->
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" data-slide="true" href="{{ path('logout') }}">Logout</a>
-                        </li>
-                    </ul>
-                </nav>
-                <!-- /.navbar -->
-
-                <!-- Main Sidebar Container -->
-                <aside class="main-sidebar sidebar-dark-primary elevation-4">
-                    <!-- Brand Logo -->
-                    {% include "brand_logo.html.twig" %}
-
-                    <!-- Sidebar -->
-                    <div class="sidebar">
-                    <!-- Sidebar user panel (optional) -->
-                        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-                            <div class="image">
-                            <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-                            </div>
-                            <div class="info">
-                                {% if app.user.username == null %}
-                                    <a href="#" class="d-block">{{ app.user.email }}</a>
-                                {% else %}
-                                    <a href="#" class="d-block">{{ app.user.username }}</a>
-                                {% endif %}
-                            </div>
+                        <div class="info">
+                            {% if app.user.username == null %}
+                                <a href="#" class="d-block">{{ app.user.email }}</a>
+                            {% else %}
+                                <a href="#" class="d-block">{{ app.user.username }}</a>
+                            {% endif %}
                         </div>
-
-                        <!-- Sidebar Menu -->
-                        <nav class="mt-2">
-                            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                              <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
-                              <li class="nav-item has-treeview">
-                                  <a href="/" class="nav-link active">
-                                  <i class="nav-icon fas fa-home"></i>
-                                      <p>Home</p>
-                                  </a>
-                              </li>
-                              <li class="nav-item has-treeview">
-                                  <a href="/clinic" class="nav-link">
-                                      <i class="nav-icon fas fa-stethoscope"></i>
-                                      <p>Clinic</p>
-                                  </a>
-                              </li>
-                              <li class="nav-item has-treeview">
-                                  <a href="#" class="nav-link">
-                                      <i class="nav-icon fas fa-clinic-medical"></i>
-                                      <p>Ward Addmission<i class="right fas fa-angle-left"></i></p>
-                                  </a>
-                                  <ul class="nav nav-treeview">
-                                      <li class="nav-item">
-                                          <a href="/patient" class="nav-link">
-                                          <i class="nav-icon fas fa-user-injured"></i>
-                                              <p>Patients</p>
-                                          </a>
-                                      </li>
-                                      <li class="nav-item">
-                                          <a href="/doctor" class="nav-link">
-                                          <i class="nav-icon fas fa-user-md"></i>
-                                              <p>Doctors</p>
-                                          </a>
-                                      </li>
-                                      <li class="nav-item">
-                                          <a href="/nurse" class="nav-link">
-                                          <i class="nav-icon fas fa-user-nurse"></i>
-                                              <p>Nurses</p>
-                                          </a>
-                                      </li>
-                                      <li class="nav-item">
-                                          <a href="/consultant" class="nav-link">
-                                          <i class="nav-icon fas fa-user-tie"></i>
-                                              <p>Consultants</p>
-                                          </a>
-                                      </li>
-                                      <li class="nav-item">
-                                          <a href="/technician" class="nav-link">
-                                          <i class="nav-icon fas fa-user"></i>
-                                              <p>Technicians</p>
-                                          </a>
-                                      </li>
-                                  </ul>
-                              </li>
-                              <li class="nav-item has-treeview">
-                                  <a href="/icu" class="nav-link">
-                                      <i class="nav-icon fas fa-procedures"></i>
-                                      <p>ICU</p>
-                                  </a>
-                              </li>
-                              <li class="nav-item has-treeview">
-                                  <a href="/surgery" class="nav-link">
-                                      <i class="nav-icon fas fa-syringe"></i>
-                                      <p>Surgery</p>
-                                  </a>
-                              </li>
-                              <li class="nav-item has-treeview">
-                                  <a href="/discharge" class="nav-link">
-                                      <i class="nav-icon far fa-plus-square"></i>
-                                      <p>Discharge</p>
-                                  </a>   
-                              </li>
-                              <li class="nav-item has-treeview">
-                                  <a href="{{ path('logout') }}" class="nav-link">
-                                      <i class="nav-icon fas fa-sign-out-alt"></i>
-                                      <p>Logout</p>
-                                  </a>   
-                              </li>
-                          </ul>
-                        </nav>
-                        <!-- /.sidebar-menu -->
                     </div>
-                    <!-- /.sidebar -->
-                </aside>
 
-                <!-- Content Wrapper. Contains page content -->
-                <div class="content-wrapper">
-                    <!-- Content Header (Page header) -->
-                    <div class="content-header">                 
-                        {% include "page_header_nav.html.twig" %}
-                        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
-                            <div class="container d-flex align-items-center">
-                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="oi oi-menu"></span> Menu
-                                </button>
-                            </div>
-                        </nav>
-                        <!-- END nav -->
-                        <section class="home-slider owl-carousel">
-                            <div class="slider-item" style="background-image:url(images/bg_1.jpg);" data-stellar-background-ratio="0.5">
-                                <div class="overlay"></div>
-                                <div class="container">
-                                    <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
-                                        <div class="col-md-6 text ftco-animate">
-                                            <h1 class="mb-4">Helping Your <span>Stay Happy One</span></h1>
-                                            <h3 class="subheading">Everyday We Bring Hope and Smile to the Patient We Serve</h3>
-                                            <p><a href="patient/add" class="btn btn-secondary px-4 py-3 mt-3">Add new Patient</a></p>
-                                        </div>
+                    <!-- Sidebar Menu -->
+                    <nav class="mt-2">
+                        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                          <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
+                          <li class="nav-item">
+                              <a href="/" class="nav-link active">
+                              <i class="nav-icon fas fa-home"></i>
+                                  <p>Home</p>
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="/clinic" class="nav-link">
+                                  <i class="nav-icon fas fa-stethoscope"></i>
+                                  <p>Clinic</p>
+                              </a>
+                          </li>
+                          <li class="nav-item has-treeview">
+                              <a href="#" class="nav-link">
+                                  <i class="nav-icon fas fa-clinic-medical"></i>
+                                  <p>Ward Addmission<i class="right fas fa-angle-left"></i></p>
+                              </a>
+                              <ul class="nav nav-treeview">
+                                  <li class="nav-item">
+                                      <a href="/patient" class="nav-link">
+                                      <i class="nav-icon fas fa-user-injured"></i>
+                                          <p>Patients</p>
+                                      </a>
+                                  </li>
+                                  <li class="nav-item">
+                                      <a href="/doctor" class="nav-link">
+                                      <i class="nav-icon fas fa-user-md"></i>
+                                          <p>Doctors</p>
+                                      </a>
+                                  </li>
+                                  <li class="nav-item">
+                                      <a href="/nurse" class="nav-link">
+                                      <i class="nav-icon fas fa-user-nurse"></i>
+                                          <p>Nurses</p>
+                                      </a>
+                                  </li>
+                                  <li class="nav-item">
+                                      <a href="/consultant" class="nav-link">
+                                      <i class="nav-icon fas fa-user-tie"></i>
+                                          <p>Consultants</p>
+                                      </a>
+                                  </li>
+                                  <li class="nav-item">
+                                      <a href="/technician" class="nav-link">
+                                      <i class="nav-icon fas fa-user"></i>
+                                          <p>Technicians</p>
+                                      </a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li class="nav-item">
+                              <a href="/icu" class="nav-link">
+                                  <i class="nav-icon fas fa-procedures"></i>
+                                  <p>ICU</p>
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="/surgery" class="nav-link">
+                                  <i class="nav-icon fas fa-syringe"></i>
+                                  <p>Surgery</p>
+                              </a>
+                          </li>
+                          <li class="nav-item">
+                              <a href="/discharge" class="nav-link">
+                                  <i class="nav-icon far fa-plus-square"></i>
+                                  <p>Discharge</p>
+                              </a>   
+                          </li>
+                          <li class="nav-item">
+                              <a href="{{ path('logout') }}" class="nav-link">
+                                  <i class="nav-icon fas fa-sign-out-alt"></i>
+                                  <p>Logout</p>
+                              </a>   
+                          </li>
+                      </ul>
+                    </nav>
+                    <!-- /.sidebar-menu -->
+                </div>
+                <!-- /.sidebar -->
+            </aside>
+
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <div class="content-header">                 
+                    {% include "page_header_nav.html.twig" %}
+                    
+                    <section class="home-slider owl-carousel">
+                        <div class="slider-item" style="background-image:url('{{ asset('images/bg_1.jpg') }}');" data-stellar-background-ratio="0.5">
+                            <div class="overlay"></div>
+                            <div class="container">
+                                <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
+                                    <div class="col-md-6 text ftco-animate">
+                                        <h1 class="mb-4">Helping Your <span>Stay Happy One</span></h1>
+                                        <h3 class="subheading">Everyday We Bring Hope and Smile to the Patient We Serve</h3>
+                                        <p><a href="patient/add" class="btn btn-secondary px-4 py-3 mt-3">Add new Patient</a></p>
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
-                            <div class="slider-item" style="background-image:url(images/bg_2.jpg);"  data-stellar-background-ratio="0.5">
+                            <div class="slider-item" style="background-image:url('{{ asset('images/bg_2.jpg') }}');"  data-stellar-background-ratio="0.5">
                                 <div class="overlay"></div>
                                 <div class="container">
                                     <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
@@ -300,7 +250,7 @@
                     <section class="ftco-section ftco-no-pt ftc-no-pb">
                         <div class="container">
                             <div class="row no-gutters">
-                                <div class="col-md-5 p-md-5 img img-2 mt-5 mt-md-0" style="background-image: url(images/about.jpg);"></div>                      
+                                <div class="col-md-5 p-md-5 img img-2 mt-5 mt-md-0" style="background-image: url('{{ asset('images/about.jpg') }}');"></div>                      
                                 <div class="col-md-7 wrap-about py-4 py-md-5 ftco-animate">
                                     <div class="heading-section mb-5">
                                         <div class="pl-md-5 ml-md-5">
@@ -354,7 +304,7 @@
                         </div>
                     </section>
 		
-                    <section class="ftco-intro" style="background-image: url(images/bg_3.jpg);" data-stellar-background-ratio="0.5">
+                    <section class="ftco-intro" style="background-image: url('{{ asset('images/bg_3.jpg') }}');" data-stellar-background-ratio="0.5">
                         <div class="overlay"></div>
                         <div class="container">
                             <div class="row">
@@ -392,7 +342,7 @@
                                             <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="day-1-tab">
                                                 <div class="row departments">
                                                     <div class="col-lg-4 order-lg-last d-flex align-items-stretch">
-                                                        <div class="img d-flex align-self-stretch" style="background-image: url(images/dept-1.jpg);"></div>
+                                                        <div class="img d-flex align-self-stretch" style="background-image: url('{{ asset('images/dept-1.jpg') }}');"></div>
                                                     </div>
                                                     <div class="col-md-8">
                                                         <h2>Surgical Deparments</h2>
@@ -441,7 +391,7 @@
                                             <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-day-2-tab">
                                                 <div class="row departments">
                                                     <div class="col-lg-4 order-lg-last d-flex align-items-stretch">
-                                                        <div class="img d-flex align-self-stretch" style="background-image: url(images/dept-2.jpg);"></div>
+                                                        <div class="img d-flex align-self-stretch" style="background-image: url('{{ asset('images/dept-2.jpg') }}');"></div>
                                                     </div>
                                                     <div class="col-md-8">
                                                         <h2>Surgical Deparments</h2>
@@ -490,7 +440,7 @@
                                             <div class="tab-pane fade" id="v-pills-5" role="tabpanel" aria-labelledby="v-pills-day-5-tab">
                                                 <div class="row departments">
                                                         <div class="col-lg-4 order-lg-last d-flex align-items-stretch">
-                                                            <div class="img d-flex align-self-stretch" style="background-image: url(images/dept-5.jpg);"></div>
+                                                            <div class="img d-flex align-self-stretch" style="background-image: url('{{ asset('images/dept-5.jpg') }}');"></div>
                                                         </div>
                                                         <div class="col-md-8">
                                                             <h2>Cardiology Deparments</h2>
@@ -559,7 +509,7 @@
 					                <div class="col-md-6 col-lg-3 ftco-animate">
 						                <div class="staff">
 						                	<div class="img-wrap d-flex align-items-stretch">
-						                		<div class="img align-self-stretch" style="background-image: url(images/doc-1.jpg);"></div>
+						                		<div class="img align-self-stretch" style="background-image: url('{{ asset('images/doc-1.jpg') }}');"></div>
 						                	</div>
 						                	<div class="text pt-3 text-center">
 						                		<h3><a href="/doctor/edit/{{ doctor.id }}">{{  doctor.dFirstName }}</a></h3>        
@@ -600,7 +550,7 @@
                                     <div class="col-md-6 col-lg-3 ftco-animate">
                                         <div class="staff">
                                             <div class="img-wrap d-flex align-items-stretch">
-                                                <div class="img align-self-stretch" style="background-image: url(images/person_2.jpg);"></div>
+                                                <div class="img align-self-stretch" style="background-image: url('{{ asset('images/person_2.jpg') }}');"></div>
                                             </div>
                                             <div class="text pt-3 text-center">
                                                 <h3><a href="/consultant/edit/{{ consultant.id }}">{{  consultant.cFirstName }}</a></h3>
@@ -641,7 +591,7 @@
                                 <div class="col-md-6 col-lg-3 ftco-animate">
                                     <div class="staff">
                                         <div class="img-wrap d-flex align-items-stretch">
-                                        <div class="img align-self-stretch" style="background-image: url(images/team-1.jpg);"></div>
+                                        <div class="img align-self-stretch" style="background-image: url('{{ asset('images/team-1.jpg') }}');"></div>
                                     </div>
                                     <div class="text pt-3 text-center">
                                         <h3><a href="/nurse/edit/{{ nurse.id }}">{{  nurse.nFirstName }}</a></h3>
@@ -682,7 +632,7 @@
                                         <div class="col-md-6 col-lg-3 ftco-animate">
                                             <div class="staff">
                                                 <div class="img-wrap d-flex align-items-stretch">
-                                                    <div class="img align-self-stretch" style="background-image: url(images/person_4.jpg);"></div>
+                                                    <div class="img align-self-stretch" style="background-image: url('{{ asset('images/person_4.jpg') }}');"></div>
                                                 </div>
                                                 <div class="text pt-3 text-center">
                                                     <h3><a href="technician/edit/{{ technician.id }}">{{  technician.tFirstName }}</a></h3>  
@@ -722,7 +672,7 @@
                             <div class="carousel-testimony owl-carousel">
                             <div class="item">
                                 <div class="testimony-wrap d-flex">
-                                <div class="user-img mr-4" style="background-image: url(images/person_1.jpg)">
+                                <div class="user-img mr-4" style="background-image: url('{{ asset('images/person_1.jpg') }}')">
                                 </div>
                                 <div class="text ml-2 bg-light">
                                     <span class="quote d-flex align-items-center justify-content-center">
@@ -736,7 +686,7 @@
                             </div>
                             <div class="item">
                                 <div class="testimony-wrap d-flex">
-                                <div class="user-img mr-4" style="background-image: url(images/person_2.jpg)">
+                                <div class="user-img mr-4" style="background-image: url('{{ asset('images/person_2.jpg') }}')">
                                 </div>
                                 <div class="text ml-2 bg-light">
                                     <span class="quote d-flex align-items-center justify-content-center">
@@ -750,7 +700,7 @@
                             </div>
                             <div class="item">
                                 <div class="testimony-wrap d-flex">
-                                <div class="user-img mr-4" style="background-image: url(images/person_3.jpg)">
+                                <div class="user-img mr-4" style="background-image: url('{{ asset('images/person_3.jpg') }}')">
                                 </div>
                                 <div class="text ml-2 bg-light">
                                     <span class="quote d-flex align-items-center justify-content-center">
@@ -764,7 +714,7 @@
                             </div>
                             <div class="item">
                                 <div class="testimony-wrap d-flex">
-                                <div class="user-img mr-4" style="background-image: url(images/person_4.jpg)">
+                                <div class="user-img mr-4" style="background-image: url('{{ asset('images/person_4.jpg') }}')">
                                 </div>
                                 <div class="text ml-2 bg-light">
                                     <span class="quote d-flex align-items-center justify-content-center">
@@ -778,7 +728,7 @@
                             </div>
                             <div class="item">
                                 <div class="testimony-wrap d-flex">
-                                <div class="user-img mr-4" style="background-image: url(images/person_1.jpg)">
+                                <div class="user-img mr-4" style="background-image: url('{{ asset('images/person_1.jpg') }}')">
                                 </div>
                                 <div class="text ml-2 bg-light">
                                     <span class="quote d-flex align-items-center justify-content-center">
@@ -796,7 +746,7 @@
                     </div>
                     </section>
 
-                    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter" style="background-image: url(images/bg_3.jpg);" data-stellar-background-ratio="0.5">
+                    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter" style="background-image: url('{{ asset('images/bg_3.jpg') }}');" data-stellar-background-ratio="0.5">
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-6 py-5 pr-md-5">
@@ -979,7 +929,7 @@
                             <div class="row">
                     <div class="col-md-4 ftco-animate">
                         <div class="blog-entry">
-                        <a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
+                        <a href="blog-single.html" class="block-20" style="background-image: url('{{ asset('images/image_1.jpg') }}');">
                                             <div class="meta-date text-center p-2">
                             <span class="day">23</span>
                             <span class="mos">January</span>
@@ -1001,7 +951,7 @@
                     </div>
                     <div class="col-md-4 ftco-animate">
                         <div class="blog-entry">
-                        <a href="blog-single.html" class="block-20" style="background-image: url('images/image_2.jpg');">
+                        <a href="blog-single.html" class="block-20" style="background-image: url('{{ asset('images/image_2.jpg') }}');">
                                             <div class="meta-date text-center p-2">
                             <span class="day">23</span>
                             <span class="mos">January</span>
@@ -1023,7 +973,7 @@
                     </div>
                     <div class="col-md-4 ftco-animate">
                         <div class="blog-entry">
-                        <a href="blog-single.html" class="block-20" style="background-image: url('images/image_3.jpg');">
+                        <a href="blog-single.html" class="block-20" style="background-image: url('{{ asset('images/image_3.jpg') }}');">
                                             <div class="meta-date text-center p-2">
                             <span class="day">23</span>
                             <span class="mos">January</span>
@@ -1064,57 +1014,8 @@
         </div>
         <!-- ./wrapper -->
     </body>
-    <!-- jQuery -->
-        <script src="plugins/jquery/jquery.min.js"></script>
-        <!-- jQuery UI 1.11.4 -->
-        <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
-        <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-        <script>
-        $.widget.bridge('uibutton', $.ui.button)
-        </script>
-        <!-- Bootstrap 4 -->
-        <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <!-- ChartJS -->
-        <script src="plugins/chart.js/Chart.min.js"></script>
-        <!-- Sparkline -->
-        <script src="plugins/sparklines/sparkline.js"></script>
-        <!-- JQVMap -->
-        <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
-        <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-        <!-- jQuery Knob Chart -->
-        <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
-        <!-- daterangepicker -->
-        <script src="plugins/moment/moment.min.js"></script>
-        <script src="plugins/daterangepicker/daterangepicker.js"></script>
-        <!-- Tempusdominus Bootstrap 4 -->
-        <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-        <!-- Summernote -->
-        <script src="plugins/summernote/summernote-bs4.min.js"></script>
-        <!-- overlayScrollbars -->
-        <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-        <!-- AdminLTE App -->
-        <script src="dist/js/adminlte.js"></script>
-        <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-        <script src="dist/js/pages/dashboard.js"></script>
-        <!-- AdminLTE for demo purposes -->
-        <script src="dist/js/demo.js"></script>
-
-        <script src="js/jquery.min.js"></script>
-        <script src="js/jquery-migrate-3.0.1.min.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery.easing.1.3.js"></script>
-        <script src="js/jquery.waypoints.min.js"></script>
-        <script src="js/jquery.stellar.min.js"></script>
-        <script src="js/owl.carousel.min.js"></script>
-        <script src="js/jquery.magnific-popup.min.js"></script>
-        <script src="js/aos.js"></script>
-        <script src="js/jquery.animateNumber.min.js"></script>
-        <script src="js/bootstrap-datepicker.js"></script>
-        <script src="js/jquery.timepicker.min.js"></script>
-        <script src="js/scrollax.min.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-        <script src="js/google-map.js"></script>
-        <script src="js/main.js"></script>
-
+    
+    <!-- Javascript Links -->
+    {% include "js_part.html.twig" %}
+    
 {% endblock %}
