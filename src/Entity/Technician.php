@@ -75,6 +75,18 @@ class Technician
      */
     private $surgeries;
 
+    protected $captchaCode;
+    
+    public function getCaptchaCode()
+    {
+      return $this->captchaCode;
+    }
+
+    public function setCaptchaCode($captchaCode)
+    {
+      $this->captchaCode = $captchaCode;
+    }
+
     public function __construct()
     {
         $this->surgeries = new ArrayCollection();

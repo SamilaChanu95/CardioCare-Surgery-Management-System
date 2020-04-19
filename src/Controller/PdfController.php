@@ -7,6 +7,7 @@ use Dompdf\Options;
 use App\Entity\Patient;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Response;
 
 class PdfController extends AbstractController
 {
@@ -36,11 +37,21 @@ class PdfController extends AbstractController
             'patient' => $patient
         ]);
         
+        // Load HTML to Dompdf
         $dompdf->loadHtml($html);
+
+        // (Optional) Setup the paper size and orientation 'portrait' or 'portrait'
         $dompdf->setPaper('A4', 'portrait');
+
+        // Render the HTML as PDF
         $dompdf->render();
+
+        // Output the generated PDF to Browser (force download)
         $dompdf->stream("patientinfo.pdf", [
             "Attachment" => true
         ]);
+
+        // Send some text response
+        return new Response("The PDF file has been succesfully generated !");
     }
 }

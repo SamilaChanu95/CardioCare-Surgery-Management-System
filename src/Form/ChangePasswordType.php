@@ -17,7 +17,7 @@
 
             $builder->add('username', TextType::class, array('required' => true, 'trim' => true, 'label' => false , 'attr' => array('class' => 'form-control input-group mb-3', 'placeholder' => "Enter username")))
                 ->add('plainPassword', RepeatedType::class, array(
-                'type' => PasswordType::class,
+                'type' => PasswordType::class, 'required' => true, 'invalid_message' => 'The password fields must match.',
                 'first_options' => array('attr' => [ 'placeholder' => "Enter password", 'class' => 'form-control input-group mb-3'],'label' => false,),
                 'second_options' => array('attr' => [ 'placeholder' => "Confirm password", 'class' => 'form-control input-group mb-3'],'label' => false,),
             ));

@@ -22,6 +22,8 @@ use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Captcha\Bundle\CaptchaBundle\Form\Type\CaptchaType;
+use Captcha\Bundle\CaptchaBundle\Validator\Constraints\ValidCaptcha;
 
 class PatientController extends AbstractController
 {
@@ -108,6 +110,15 @@ class PatientController extends AbstractController
             ->add('pExaminationDetails', TextareaType::class, array('required' => true,'label' => 'Examination Details', 'attr' => array('class' => 'form-control')))
             ->add('PatientType', EntityType::class, array('class' => PatientType::class, 'required' => true,'label' => 'Patient Type','attr' => array('class' => 'form-control')))
             ->add('pStatus', ChoiceType::class, array('choices' => [ 'Active' => 'active_user', 'Deactive' => 'deactive_user'],'required' => true,'label' => 'Status', 'attr' => array('class' => 'form-control')))
+            ->add('captchaCode', CaptchaType::class, array(
+                'captchaConfig' => 'ExampleCaptchaUserRegistration',
+                'label' => 'Retype the characters from the picture',
+                'constraints' => [
+                    new ValidCaptcha ([
+                        'message' => 'Invalid captcha, please try again',
+                    ]),
+                ],
+            ))
             ->add('save', SubmitType::class, array('label'=> 'Create', 'attr' => array('class' => 'btn btn-primary mt-3')))
             ->getForm();
 
@@ -167,6 +178,15 @@ class PatientController extends AbstractController
                 'label' => 'Patient Type',
                 'attr' => array('class' => 'form-control')))
             ->add('pStatus', ChoiceType::class, array('choices' => [ 'Active' => 'active_user', 'Deactive' => 'deactive_user'],'required' => true,'label' => 'Status', 'attr' => array('class' => 'form-control')))
+            ->add('captchaCode', CaptchaType::class, array(
+                'captchaConfig' => 'ExampleCaptchaUserRegistration',
+                'label' => 'Retype the characters from the picture',
+                'constraints' => [
+                    new ValidCaptcha ([
+                        'message' => 'Invalid captcha, please try again',
+                    ]),
+                ],
+            ))
             ->add('save', SubmitType::class, array('label'=> 'Create', 'attr' => array('class' => 'btn btn-primary mt-3')))
             ->getForm();
 
@@ -227,6 +247,15 @@ class PatientController extends AbstractController
                 'label' => 'Patient Type',
                 'attr' => array('class' => 'form-control')))
             ->add('pStatus', ChoiceType::class, array('choices' => [ 'Active' => 'active_user', 'Deactive' => 'deactive_user'],'required' => true,'label' => 'Status', 'attr' => array('class' => 'form-control')))
+            ->add('captchaCode', CaptchaType::class, array(
+                'captchaConfig' => 'ExampleCaptchaUserRegistration',
+                'label' => 'Retype the characters from the picture',
+                'constraints' => [
+                    new ValidCaptcha ([
+                        'message' => 'Invalid captcha, please try again',
+                    ]),
+                ],
+            ))
             ->add('save', SubmitType::class, array('label'=> 'Create', 'attr' => array('class' => 'btn btn-primary mt-3')))
             ->getForm();
 
@@ -287,6 +316,15 @@ class PatientController extends AbstractController
                 'label' => 'Patient Type',
                 'attr' => array('class' => 'form-control')))
             ->add('pStatus', ChoiceType::class, array('choices' => [ 'Active' => 'active_user', 'Deactive' => 'deactive_user'],'required' => true,'label' => 'Status', 'attr' => array('class' => 'form-control')))
+            ->add('captchaCode', CaptchaType::class, array(
+                'captchaConfig' => 'ExampleCaptchaUserRegistration',
+                'label' => 'Retype the characters from the picture',
+                'constraints' => [
+                    new ValidCaptcha ([
+                        'message' => 'Invalid captcha, please try again',
+                    ]),
+                ],
+            ))
             ->add('save', SubmitType::class, array('label'=> 'Create', 'attr' => array('class' => 'btn btn-primary mt-3')))
             ->getForm();
 
@@ -342,6 +380,15 @@ class PatientController extends AbstractController
             ->add('pExaminationDetails', TextareaType::class, array('required' => true,'label' => 'Examination Details', 'attr' => array('class' => 'form-control')))
             ->add('PatientType', EntityType::class, array('class' => PatientType::class, 'required' => true,'label' => 'Patient Type','attr' => array('class' => 'form-control')))
             ->add('pStatus', ChoiceType::class, array('choices' => [ 'Active' => 'active_user', 'Deactive' => 'deactive_user'],'required' => true,'label' => 'Status', 'attr' => array('class' => 'form-control')))
+            ->add('captchaCode', CaptchaType::class, array(
+                'captchaConfig' => 'ExampleCaptchaUserRegistration',
+                'label' => 'Retype the characters from the picture',
+                'constraints' => [
+                    new ValidCaptcha ([
+                        'message' => 'Invalid captcha, please try again',
+                    ]),
+                ],
+            ))
             ->add('save', SubmitType::class, array('label'=> 'Update', 'attr' => array('class' => 'btn btn-primary mt-3')))
             ->getForm();
 
@@ -402,6 +449,15 @@ class PatientController extends AbstractController
                 'label' => 'Patient Type',
                 'attr' => array('class' => 'form-control')))
             ->add('pStatus', ChoiceType::class, array('choices' => [ 'Active' => 'active_user', 'Deactive' => 'deactive_user'],'required' => true,'label' => 'Status', 'attr' => array('class' => 'form-control')))
+            ->add('captchaCode', CaptchaType::class, array(
+                'captchaConfig' => 'ExampleCaptchaUserRegistration',
+                'label' => 'Retype the characters from the picture',
+                'constraints' => [
+                    new ValidCaptcha ([
+                        'message' => 'Invalid captcha, please try again',
+                    ]),
+                ],
+            ))
             ->add('save', SubmitType::class, array('label'=> 'Update', 'attr' => array('class' => 'btn btn-primary mt-3')))
             ->getForm();
 
@@ -462,6 +518,15 @@ class PatientController extends AbstractController
                 'label' => 'Patient Type',
                 'attr' => array('class' => 'form-control')))
             ->add('pStatus', ChoiceType::class, array('choices' => [ 'Active' => 'active_user', 'Deactive' => 'deactive_user'],'required' => true,'label' => 'Status', 'attr' => array('class' => 'form-control')))
+            ->add('captchaCode', CaptchaType::class, array(
+                'captchaConfig' => 'ExampleCaptchaUserRegistration',
+                'label' => 'Retype the characters from the picture',
+                'constraints' => [
+                    new ValidCaptcha ([
+                        'message' => 'Invalid captcha, please try again',
+                    ]),
+                ],
+            ))
             ->add('save', SubmitType::class, array('label'=> 'Update', 'attr' => array('class' => 'btn btn-primary mt-3')))
             ->getForm();
 
@@ -522,6 +587,15 @@ class PatientController extends AbstractController
                 'label' => 'Patient Type',
                 'attr' => array('class' => 'form-control')))
             ->add('pStatus', ChoiceType::class, array('choices' => [ 'Active' => 'active_user', 'Deactive' => 'deactive_user'],'required' => true,'label' => 'Status', 'attr' => array('class' => 'form-control')))
+            ->add('captchaCode', CaptchaType::class, array(
+                'captchaConfig' => 'ExampleCaptchaUserRegistration',
+                'label' => 'Retype the characters from the picture',
+                'constraints' => [
+                    new ValidCaptcha ([
+                        'message' => 'Invalid captcha, please try again',
+                    ]),
+                ],
+            ))
             ->add('save', SubmitType::class, array('label'=> 'Update', 'attr' => array('class' => 'btn btn-primary mt-3')))
             ->getForm();
 

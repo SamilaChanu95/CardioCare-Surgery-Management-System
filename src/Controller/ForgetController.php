@@ -18,45 +18,39 @@ class ForgetController extends AbstractController
      */
     public function forget(Request $request, UserPasswordEncoderInterface $encoder, UserRepository $userRepository)
     {
-        $entityManager = $this->getDoctrine()->getManager();
 
-        $changePassword = $request->request->get('change_password');
-
-        $username = $changePassword['username'];
-        $password = $changePassword['plainPassword']['first'];
-
-        $user       = $entityManager->getRepository(User::class)->findBy(['username' => $username]);
         $userInfo = ['username' => null, 'plainPassword' => null];
-
-        if (!$user) {
-            $this->addFlash('error', 'Please add username');
-        }
 
         $form = $this->createForm(ChangePasswordType::class, $userInfo);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
 
-            $this->addFlash('success-forget', 'Successfully change the Password!');
-
             $userInfo = $form->getData();
             $username = $userInfo['username'];
             $plainPassword = $userInfo['plainPassword'];
 
             $user = $userRepository->findOneBy(['username' => $username]);
-            if ($user === null) {
+            if ($user === null) 
+            {
                 $this->addFlash('danger', 'Invalid username');
                 return $this->redirectToRoute('forget');
             }
-                $password = $encoder->encodePassword($user, $plainPassword);
+            
+            $password = $encoder->encodePassword($user, $plainPassword);
 
-                $user->setPassword($password);
-                $userRepository->flush();
+            $user->setPassword($password);
+            $userRepository->flush();
 
-                return $this->redirectToRoute('signin');
-            }
-            return $this->render('forget/forget.html.twig', [
+            $this->addFlash('success-forget', 'Successfully change the Password!');
+
+            return $this->redirectToRoute('login');
+
+        }
+
+        return $this->render('forget/forget.html.twig', [
             'form' => $form->createView(),
         ]);
+
     }
 }

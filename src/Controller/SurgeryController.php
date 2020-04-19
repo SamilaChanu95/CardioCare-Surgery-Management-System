@@ -22,7 +22,8 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-
+use Captcha\Bundle\CaptchaBundle\Form\Type\CaptchaType;
+use Captcha\Bundle\CaptchaBundle\Validator\Constraints\ValidCaptcha;
 
 class SurgeryController extends AbstractController
 {
@@ -57,6 +58,15 @@ class SurgeryController extends AbstractController
             ->add('Technician', EntityType::class, array('class' => Technician::class, 'required' => true,'label' => 'Technician Name','attr' => array('class' => 'form-control')))
             ->add('time', TimeType::class, array('required' => true, 'html5' => false, 'label' => 'Surgery time'))
             ->add('date', DateType::class, array('required' => true, 'html5' => false, 'label' => 'Surgery Date'))
+            ->add('captchaCode', CaptchaType::class, array(
+                'captchaConfig' => 'ExampleCaptchaUserRegistration',
+                'label' => 'Retype the characters from the picture',
+                'constraints' => [
+                    new ValidCaptcha ([
+                        'message' => 'Invalid captcha, please try again',
+                    ]),
+                ],
+            ))
             ->add('submit', SubmitType::class, array('label' => 'Create','attr' => array('class' => 'btn btn-primary mt-3')))
             ->getForm();
 
@@ -97,6 +107,15 @@ class SurgeryController extends AbstractController
             ->add('Technician', EntityType::class, array('class' => Technician::class, 'required' => true,'label' => 'Technician Name','attr' => array('class' => 'form-control')))
             ->add('time', TimeType::class, array('required' => true, 'html5' => false, 'label' => 'Surgery time'))
             ->add('date', DateType::class, array('required' => true, 'html5' => false, 'label' => 'Surgery Date'))
+            ->add('captchaCode', CaptchaType::class, array(
+                'captchaConfig' => 'ExampleCaptchaUserRegistration',
+                'label' => 'Retype the characters from the picture',
+                'constraints' => [
+                    new ValidCaptcha ([
+                        'message' => 'Invalid captcha, please try again',
+                    ]),
+                ],
+            ))
             ->add('submit', SubmitType::class, array('label' => 'Update','attr' => array('class' => 'btn btn-primary mt-3')))
             ->getForm();
 

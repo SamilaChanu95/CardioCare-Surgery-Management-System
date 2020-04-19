@@ -66,6 +66,19 @@ class Surgery
      */
     private $Technician;
 
+    protected $captchaCode;
+    
+    public function getCaptchaCode()
+    {
+      return $this->captchaCode;
+    }
+
+    public function setCaptchaCode($captchaCode)
+    {
+      $this->captchaCode = $captchaCode;
+    }
+
+
     public function getId(): ?int
     {
         return $this->id;
