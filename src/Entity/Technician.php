@@ -34,7 +34,7 @@ class Technician
     private $tLastName;
 
     /**
-     * @ORM\Column(type="string", length=50)
+     * @ORM\Column(type="string", length=20)
      */
     private $tGender;
 
@@ -44,7 +44,7 @@ class Technician
     private $tAddress;
 
     /**
-     * @ORM\Column(type="string", length=20)
+     * @ORM\Column(type="string", length=50)
      */
     private $tDOB;
 

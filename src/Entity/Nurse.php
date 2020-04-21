@@ -24,7 +24,7 @@ class Nurse
     private $nNIC;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=100)
      */
     private $nFirstName;
 

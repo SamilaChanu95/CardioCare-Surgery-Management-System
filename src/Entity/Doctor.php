@@ -46,7 +46,7 @@ class Doctor
     private $dAddress;
 
     /**
-     * @ORM\Column(type="string", length=20)
+     * @ORM\Column(type="string", length=50)
      */
     private $dDOB;
 

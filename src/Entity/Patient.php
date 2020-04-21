@@ -24,12 +24,12 @@ class Patient
     private $pNIC;
 
     /**
-     * @ORM\Column(type="string", length=200)
+     * @ORM\Column(type="string", length=100)
      */
     private $pFirstName;
 
     /**
-     * @ORM\Column(type="string", length=200)
+     * @ORM\Column(type="string", length=100)
      */
     private $pLastName;
 
